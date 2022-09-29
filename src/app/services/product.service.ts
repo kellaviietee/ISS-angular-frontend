@@ -9,10 +9,14 @@ import { Iss } from '../common/iss';
 export class ProductService {
 
   private baseUrl:string = "http://localhost:8080/api/iss/"
+  private nowUrl:string = "http://localhost:8080/api/now"
 
   constructor(private httpClient:HttpClient) { }
 
   getIss():Observable<Iss> {
     return this.httpClient.get<Iss>(this.baseUrl + 27);
+  }
+  getCurrentIss():Observable<Iss> {
+    return this.httpClient.get<Iss>(this.nowUrl);
   }
 }

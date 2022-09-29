@@ -14,10 +14,17 @@ export class IssComponentComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.getIss();
+    this.getCurrentIss()
   }
   getIss() {
     this.productService.getIss().subscribe(
+      data => {
+        this.iss = data;
+      }
+    )
+  }
+  getCurrentIss() {
+    this.productService.getCurrentIss().subscribe(
       data => {
         this.iss = data;
       }

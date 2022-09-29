@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IssComponentComponent } from './components/iss-component/iss-component.component';
+import { ProductService } from './services/product.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-iss';
+
+  constructor(private productService: ProductService) { 
+    
+  }
+
 }
