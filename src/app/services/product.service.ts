@@ -9,9 +9,9 @@ import { Person } from '../common/person';
 })
 export class ProductService {
 
-  private baseUrl:string = "http://localhost:8080/api/iss/"
-  private nowUrl:string = "http://localhost:8080/api/now"
-  private peopleUrl:string = "http://localhost:8080/api/people"
+  private baseUrl:string = "https://iss-app-version1.herokuapp.com/api/iss/"
+  private nowUrl:string = "https://iss-app-version1.herokuapp.com/api/now"
+  private peopleUrl:string = "https://iss-app-version1.herokuapp.com/api/people"
 
   constructor(private httpClient:HttpClient) { }
 
